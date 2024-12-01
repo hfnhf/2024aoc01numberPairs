@@ -8,10 +8,18 @@ class PairAnalyzer
     exit 1
   end
 
+  private
+
+  def spacerLine
+    puts "-" * 50
+  end
+
+  public
+
   def display_analysis
     # Show input data preview
     puts "\nInput data preview (first 10 rows):"
-    puts "-" * 50
+    spacerLine
     @db.execute("SELECT left_num, right_num FROM number_pairs LIMIT 10").each do |row|
       puts "#{row[0]}   #{row[1]}"
     end
@@ -25,16 +33,16 @@ class PairAnalyzer
 
     # Display sorted columns and differences
     puts "\nSorted columns with differences:"
-    puts "-" * 50
+    spacerLine
     puts "Left     Right    |Diff|"
-    puts "-" * 50
+    spacerLine
     
     left_sorted.zip(right_sorted, differences).each do |left, right, diff|
       puts "#{left.to_s.ljust(8)} #{right.to_s.ljust(8)} #{diff}"
     end
 
     # Show total difference
-    puts "-" * 50
+    spacerLine
     puts "Total difference: #{differences.sum}"
   end
 end

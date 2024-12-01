@@ -8,9 +8,17 @@ class DBViewer
     exit 1
   end
 
+  private
+
+  def spacerLine
+    puts "-" * 50
+  end
+
+  public
+
   def show_schema
     puts "\nDatabase Schema:"
-    puts "-" * 50
+    spacerLine
     @db.table_info('number_pairs') do |column|
       puts "#{column['name'].ljust(10)} #{column['type']}"
     end
@@ -18,9 +26,9 @@ class DBViewer
 
   def show_all_data
     puts "\nAll Records:"
-    puts "-" * 50
+    spacerLine
     puts "ID    LEFT     RIGHT"
-    puts "-" * 50
+    spacerLine
     
     @db.execute("SELECT * FROM number_pairs") do |row|
       puts "#{row[0].to_s.ljust(6)} #{row[1].to_s.ljust(8)} #{row[2]}"
