@@ -2,3 +2,4 @@
 *.sqlite3
 *.sqlite
 .DS_Store
+01input.txt
