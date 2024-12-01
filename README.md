@@ -1,4 +1,4 @@
-# Historian Number Pairs Analyzer
+# Number Pairs Analyzer
 
 A Ruby-based tool for analyzing and comparing pairs of numbers from historical records. Part of the Advent of Code 2024 Day 1 solution toolkit.
 
