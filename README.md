@@ -1,6 +1,6 @@
 # Historian Number Pairs Analyzer
 
-A Ruby-based tool for analyzing and comparing pairs of numbers from historical records. Part of the Advent of Code 2023 Day 1 solution toolkit.
+A Ruby-based tool for analyzing and comparing pairs of numbers from historical records. Part of the Advent of Code 2024 Day 1 solution toolkit.
 
 ## Features
 - Process pairs of 5-digit numbers from text input
