@@ -31,3 +31,5 @@ ruby analyze_pairs.rb
 
 ## License
 This project is licensed under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International - see the [LICENSE](LICENSE) file for details.
+
+![image](https://github.com/user-attachments/assets/2502e4f7-5867-4559-b531-33d3a1f4a1b1)
