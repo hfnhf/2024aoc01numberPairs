@@ -60,12 +60,17 @@ class NumberProcessor
   end
 
   def display_sorted_data
-    puts "\nLeft numbers sorted:"
+    puts "\nInput data preview (first 10 rows):"
+    @db.execute("SELECT left_num, right_num FROM number_pairs LIMIT 10").each do |row|
+      puts "#{row[0]}   #{row[1]}"
+    end
+
+    puts "\nLeft numbers sorted ascending:"
     @db.execute("SELECT left_num FROM number_pairs ORDER BY left_num").each do |row|
       puts row[0]
     end
 
-    puts "\nRight numbers sorted:"
+    puts "\nRight numbers sorted ascending:"
     @db.execute("SELECT right_num FROM number_pairs ORDER BY right_num").each do |row|
       puts row[0]
     end
